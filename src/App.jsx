@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./App.css";
+import Search from "./Components/Search";
 
 const getUser = () => {
   return Promise.resolve({ id: "1", name: "Robin" });
@@ -31,21 +32,6 @@ function App() {
       </Search>
 
       <p>Searches for {search ? search : "..."}</p>
-    </div>
-  );
-}
-
-function Search({ value, onChange, children }) {
-  return (
-    <div>
-      <label htmlFor="search">{children}</label>
-      <input
-        id="search"
-        type="text"
-        value={value}
-        onChange={onChange}
-        placeholder="search"
-      />
     </div>
   );
 }
